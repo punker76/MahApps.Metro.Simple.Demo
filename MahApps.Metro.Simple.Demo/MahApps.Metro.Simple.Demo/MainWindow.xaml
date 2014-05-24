@@ -25,6 +25,27 @@
     </DataTemplate>
   </controls:MetroWindow.TitleTemplate>
 
+  <controls:MetroWindow.RightWindowCommands>
+    <controls:WindowCommands>
+      <Button Content="settings" />
+      <Button>
+        <StackPanel Orientation="Horizontal">
+          <Rectangle Width="20"
+                     Height="20"
+                     Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+            <Rectangle.OpacityMask>
+              <VisualBrush Stretch="Fill"
+                           Visual="{StaticResource appbar_cupcake}" />
+            </Rectangle.OpacityMask>
+          </Rectangle>
+          <TextBlock Margin="4 0 0 0"
+                     VerticalAlignment="Center"
+                     Text="deploy cupcakes" />
+        </StackPanel>
+      </Button>
+    </controls:WindowCommands>
+  </controls:MetroWindow.RightWindowCommands>
+
   <Grid>
     <TextBlock Text="Welcome to the MahApps.Metro World..."
                FontSize="30"

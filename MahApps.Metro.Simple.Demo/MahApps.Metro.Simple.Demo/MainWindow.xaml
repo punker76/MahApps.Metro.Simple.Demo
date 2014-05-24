@@ -5,21 +5,18 @@
                       xmlns:converters="http://metro.mahapps.com/winfx/xaml/shared"
                       RenderOptions.ClearTypeHint="Enabled"
                       TextOptions.TextFormattingMode="Display"
-                      Title="MainWindow"
-                      Height="200"
+                      Title="Simple MahApps.Metro Demo"
+                      Height="250"
                       Width="600"
-                      EnableDWMDropShadow="True"
+                      BorderBrush="{DynamicResource AccentColorBrush}"
+                      BorderThickness="1"
                       ResizeMode="CanResizeWithGrip"
                       WindowTransitionsEnabled="False"
                       WindowStartupLocation="CenterScreen">
 
-  <controls:MetroWindow.Resources>
-    <converters:ToUpperConverter x:Key="ToUpperConverter" />
-  </controls:MetroWindow.Resources>
-
   <controls:MetroWindow.TitleTemplate>
     <DataTemplate>
-      <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Converter={StaticResource ToUpperConverter}}"
+      <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Converter={converters:ToUpperConverter}}"
                  TextTrimming="CharacterEllipsis"
                  VerticalAlignment="Center"
                  Margin="8 -1 0 0"

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using MahApps.Metro.Controls;
 
 namespace MahApps.Metro.Simple.Demo
@@ -11,6 +12,19 @@ namespace MahApps.Metro.Simple.Demo
     public MainWindow()
     {
       InitializeComponent();
+    }
+
+    private MetroWindow accentThemeTestWindow;
+
+    private void AccentTest_ButtonClick(object sender, RoutedEventArgs e)
+    {
+      if (accentThemeTestWindow != null)
+      {
+        accentThemeTestWindow.Close();
+      }
+
+      accentThemeTestWindow = new AccentThemeTestWindow();
+      accentThemeTestWindow.Show();
     }
   }
 }

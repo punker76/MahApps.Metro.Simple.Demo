@@ -1,0 +1,100 @@
+﻿<controls:MetroWindow x:Class="MahApps.Metro.Simple.Demo.AccentThemeTestWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:converters="http://metro.mahapps.com/winfx/xaml/shared"
+                      RenderOptions.ClearTypeHint="Enabled"
+                      TextOptions.TextFormattingMode="Display"
+                      Title="Accent/Theme Test"
+                      Height="200"
+                      Width="500"
+                      BorderBrush="{DynamicResource AccentColorBrush}"
+                      BorderThickness="1"
+                      ResizeMode="CanResizeWithGrip"
+                      WindowTransitionsEnabled="False"
+                      WindowStartupLocation="CenterScreen">
+
+  <controls:MetroWindow.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </controls:MetroWindow.Resources>
+
+  <controls:MetroWindow.TitleTemplate>
+    <DataTemplate>
+      <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Converter={converters:ToUpperConverter}}"
+                 TextTrimming="CharacterEllipsis"
+                 VerticalAlignment="Center"
+                 Margin="8 -1 0 0"
+                 FontSize="{DynamicResource WindowTitleFontSize}"
+                 FontFamily="{DynamicResource DefaultFont}" />
+    </DataTemplate>
+  </controls:MetroWindow.TitleTemplate>
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <GroupBox Grid.Row="0"
+              Margin="5"
+              Header="Change Window">
+      <UniformGrid Columns="5">
+        <Button Width="75"
+                Height="23"
+                Content="Dark"
+                Click="DarkButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Light"
+                Click="LightButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Blue"
+                Click="BlueButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Red"
+                Click="RedButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Green"
+                Click="GreenButtonClick" />
+      </UniformGrid>
+    </GroupBox>
+
+    <GroupBox Grid.Row="1"
+              Margin="5"
+              Header="Change Application">
+      <UniformGrid Columns="5">
+        <Button Width="75"
+                Height="23"
+                Content="Dark"
+                Click="DarkAppButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Light"
+                Click="LightAppButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Blue"
+                Click="BlueAppButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Red"
+                Click="RedAppButtonClick" />
+        <Button Width="75"
+                Height="23"
+                Content="Green"
+                Click="GreenAppButtonClick" />
+      </UniformGrid>
+    </GroupBox>
+
+  </Grid>
+
+</controls:MetroWindow>

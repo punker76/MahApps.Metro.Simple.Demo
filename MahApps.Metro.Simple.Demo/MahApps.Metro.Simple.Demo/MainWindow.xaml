@@ -27,7 +27,7 @@
 
   <controls:MetroWindow.RightWindowCommands>
     <controls:WindowCommands>
-      <Button Content="settings" />
+      <Button Content="accent test" Click="AccentTest_ButtonClick" />
       <Button>
         <StackPanel Orientation="Horizontal">
           <Rectangle Width="20"

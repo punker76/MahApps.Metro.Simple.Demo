@@ -6,8 +6,8 @@
                       RenderOptions.ClearTypeHint="Enabled"
                       TextOptions.TextFormattingMode="Display"
                       Title="Accent/Theme Test"
-                      Height="200"
-                      Width="500"
+                      Height="300"
+                      Width="600"
                       BorderBrush="{DynamicResource AccentColorBrush}"
                       BorderThickness="1"
                       ResizeMode="CanResizeWithGrip"
@@ -35,8 +35,16 @@
   </controls:MetroWindow.TitleTemplate>
 
   <Grid>
+    
+    <Grid.Resources>
+      <Style TargetType="Button" BasedOn="{StaticResource MetroButton}">
+        <Setter Property="Height" Value="23" />
+        <Setter Property="Margin" Value="2" />
+      </Style>
+    </Grid.Resources>
 
     <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
@@ -45,25 +53,15 @@
               Margin="5"
               Header="Change Window">
       <UniformGrid Columns="5">
-        <Button Width="75"
-                Height="23"
-                Content="Dark"
+        <Button Content="Dark"
                 Click="DarkButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Light"
+        <Button Content="Light"
                 Click="LightButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Blue"
+        <Button Content="Blue"
                 Click="BlueButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Red"
+        <Button Content="Red"
                 Click="RedButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Green"
+        <Button Content="Green"
                 Click="GreenButtonClick" />
       </UniformGrid>
     </GroupBox>
@@ -72,26 +70,33 @@
               Margin="5"
               Header="Change Application">
       <UniformGrid Columns="5">
-        <Button Width="75"
-                Height="23"
-                Content="Dark"
+        <Button Content="Dark"
                 Click="DarkAppButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Light"
+        <Button Content="Light"
                 Click="LightAppButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Blue"
+        <Button Content="Blue"
                 Click="BlueAppButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Red"
+        <Button Content="Red"
                 Click="RedAppButtonClick" />
-        <Button Width="75"
-                Height="23"
-                Content="Green"
+        <Button Content="Green"
                 Click="GreenAppButtonClick" />
+      </UniformGrid>
+    </GroupBox>
+
+    <GroupBox Grid.Row="2"
+              Margin="5"
+              Header="Change Application">
+      <UniformGrid Columns="5">
+        <Button Content="Dark"
+                Click="DarkAppButtonClick" />
+        <Button Content="Light"
+                Click="LightAppButtonClick" />
+        <Button Content="Custom Theme"
+                Click="CustomThemeAppButtonClick" />
+        <Button Content="Custom Accent 1"
+                Click="CustomAccent1AppButtonClick" />
+        <Button Content="Custom Accent 2"
+                Click="CustomAccent2AppButtonClick" />
       </UniformGrid>
     </GroupBox>
 

@@ -72,5 +72,23 @@ namespace MahApps.Metro.Simple.Demo
       var theme = ThemeManager.DetectAppStyle(Application.Current);
       ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent("Green"), theme.Item1);
     }
+
+    private void CustomThemeAppButtonClick(object sender, RoutedEventArgs e)
+    {
+      var theme = ThemeManager.DetectAppStyle(Application.Current);
+      ThemeManager.ChangeAppStyle(Application.Current, theme.Item2, ThemeManager.GetAppTheme("CustomTheme"));
+    }
+
+    private void CustomAccent1AppButtonClick(object sender, RoutedEventArgs e)
+    {
+      var theme = ThemeManager.DetectAppStyle(Application.Current);
+      ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent("CustomAccent1"), theme.Item1);
+    }
+
+    private void CustomAccent2AppButtonClick(object sender, RoutedEventArgs e)
+    {
+      var theme = ThemeManager.DetectAppStyle(Application.Current);
+      ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent("CustomAccent2"), theme.Item1);
+    }
   }
 }

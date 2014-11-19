@@ -21,7 +21,7 @@ namespace MahApps.Metro.Simple.Demo
 
           SetThemeColor(Colors.Red);
           SetThemeColor(Colors.Yellow);
-          SetThemeColor(Colors.Red, true); // yes, again red, test for the thememanager, it should only add once
+          //SetThemeColor(Colors.Red, true); // yes, again red, test for the thememanager, it should only add once
 
           base.OnStartup(e);
       }

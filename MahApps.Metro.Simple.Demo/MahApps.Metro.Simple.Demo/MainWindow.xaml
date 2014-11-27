@@ -14,44 +14,43 @@
                       WindowTransitionsEnabled="False"
                       WindowStartupLocation="CenterScreen">
 
-  <controls:MetroWindow.TitleTemplate>
-    <DataTemplate>
-      <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Converter={converters:ToUpperConverter}}"
-                 TextTrimming="CharacterEllipsis"
-                 VerticalAlignment="Center"
-                 Margin="8 -1 0 0"
-                 FontSize="{DynamicResource WindowTitleFontSize}"
-                 FontFamily="{DynamicResource DefaultFont}" />
-    </DataTemplate>
-  </controls:MetroWindow.TitleTemplate>
+    <controls:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Converter={converters:ToUpperConverter}}"
+                       TextTrimming="CharacterEllipsis"
+                       VerticalAlignment="Center"
+                       Margin="8 -1 0 0"
+                       FontSize="{DynamicResource WindowTitleFontSize}"
+                       FontFamily="{DynamicResource DefaultFont}" />
+        </DataTemplate>
+    </controls:MetroWindow.TitleTemplate>
 
-  <controls:MetroWindow.RightWindowCommands>
-    <controls:WindowCommands>
-      <Button Content="accent test" Click="AccentTest_ButtonClick" />
-      <Button>
-        <StackPanel Orientation="Horizontal">
-          <Rectangle Width="20"
-                     Height="20"
-                     Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
-            <Rectangle.OpacityMask>
-              <VisualBrush Stretch="Fill"
-                           Visual="{StaticResource appbar_cupcake}" />
-            </Rectangle.OpacityMask>
-          </Rectangle>
-          <TextBlock Margin="4 0 0 0"
-                     VerticalAlignment="Center"
-                     Text="deploy cupcakes" />
-        </StackPanel>
-      </Button>
-    </controls:WindowCommands>
-  </controls:MetroWindow.RightWindowCommands>
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                               Height="20"
+                               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill"
+                                         Visual="{StaticResource appbar_cupcake}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                               VerticalAlignment="Center"
+                               Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
 
-  <Grid>
-    <TextBlock Text="Welcome to the MahApps.Metro World..."
-               FontSize="30"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontWeight="Light" />
-  </Grid>
+    <Grid>
+        <TextBlock Text="Welcome to the MahApps.Metro World..."
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Light" />
+    </Grid>
 
 </controls:MetroWindow>

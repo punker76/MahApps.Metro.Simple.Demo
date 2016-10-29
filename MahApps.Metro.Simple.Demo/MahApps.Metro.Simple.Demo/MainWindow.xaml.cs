@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Windows;
 using MahApps.Metro.Controls;
 
 namespace MahApps.Metro.Simple.Demo
@@ -11,6 +11,11 @@ namespace MahApps.Metro.Simple.Demo
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void GitHubButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/MahApps/MahApps.Metro");
         }
     }
 }
